@@ -10,7 +10,7 @@
 .mf
 .wrangler
 .dev.vars*
-
+wrangler.jsonc
 
 !.dev.vars.example
 .env*
