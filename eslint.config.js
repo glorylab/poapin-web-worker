@@ -31,6 +31,25 @@ export default tseslint.config(
     },
   },
   {
+    // Node.js scripts configuration
+    files: ['scripts/**/*.js', 'scripts/**/*.mjs'],
+    languageOptions: {
+      globals: {
+        process: 'readonly',
+        console: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+      },
+      ecmaVersion: 2022,
+      sourceType: 'module',
+    },
+    rules: {
+      'no-console': 'off', // Allow console in scripts
+      'no-undef': 'error',
+    },
+  },
+  {
     // Ignore build outputs and config files
     ignores: [
       'build/**',
