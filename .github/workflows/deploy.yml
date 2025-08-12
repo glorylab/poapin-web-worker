@@ -18,6 +18,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Generate wrangler config from template
+        run: |
+          envsubst < wrangler.template.jsonc > wrangler.jsonc
+        env:
+          CUSTOM_DOMAIN: ${{ secrets.CUSTOM_DOMAIN }}
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -32,12 +38,6 @@ jobs:
 
       - name: Run linting
         run: npm run lint
-
-      - name: Generate wrangler config from template
-        run: |
-          envsubst < wrangler.template.jsonc > wrangler.jsonc
-        env:
-          CUSTOM_DOMAIN: ${{ secrets.CUSTOM_DOMAIN }}
 
       - name: Build application
         run: npm run build
