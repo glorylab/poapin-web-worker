@@ -37,6 +37,7 @@ export default tseslint.config(
       'dist/**',
       'node_modules/**',
       '.wrangler/**',
+      '.react-router/**', // Auto-generated React Router types
       'wrangler.toml',
       'wrangler.jsonc',
       'worker-configuration.d.ts', // Auto-generated Cloudflare types
