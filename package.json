@@ -7,6 +7,8 @@
 		"cf-typegen": "wrangler types",
 		"deploy": "npm run build && wrangler deploy",
 		"dev": "react-router dev",
+		"lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+		"lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
 		"postinstall": "npm run cf-typegen",
 		"preview": "npm run build && vite preview",
 		"typecheck": "npm run cf-typegen && react-router typegen && tsc -b"
@@ -19,13 +21,17 @@
 	},
 	"devDependencies": {
 		"@cloudflare/vite-plugin": "^1.0.12",
+		"@eslint/js": "^9.33.0",
 		"@react-router/dev": "^7.7.1",
 		"@tailwindcss/vite": "^4.1.4",
+		"@types/eslint__js": "^8.42.3",
 		"@types/node": "^20",
 		"@types/react": "^19.1.2",
 		"@types/react-dom": "^19.1.2",
+		"eslint": "^9.33.0",
 		"tailwindcss": "^4.1.4",
 		"typescript": "^5.8.3",
+		"typescript-eslint": "^8.39.1",
 		"vite": "^6.3.3",
 		"vite-tsconfig-paths": "^5.1.4",
 		"wrangler": "^4.28.1"
