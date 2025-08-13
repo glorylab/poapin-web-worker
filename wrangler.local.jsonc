@@ -2,6 +2,7 @@
 	"name": "poapin-web-worker",
 	"compatibility_date": "2025-04-04",
 	"main": "./workers/app.ts",
+	"logpush": true,
 	"vars": {
 		"VALUE_FROM_CLOUDFLARE": "Hello from Cloudflare"
 	},
